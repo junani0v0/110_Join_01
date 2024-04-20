@@ -13,15 +13,25 @@ import com.join01.www.service.JoinService;
 @Controller
 public class LoginController {
 	
+	/**
+	 * LoginController 빈등록 확인용
+	 */
+	
 	public LoginController() {
 		System.out.println("======================생성완료======================");
 	}
 	
+	/**
+	 * login.jsp 연결용
+	 */
 	@RequestMapping("/loginPage.do")
 	public String loginPage() {
 		return "login";
 	}
 	
+	/**
+	 * JoinService 의존성 주입
+	 */
 	@Autowired
 	private JoinService joinService;
 	
@@ -32,7 +42,13 @@ public class LoginController {
 //		joinService.join(params);
 //		return "login";
 		
-		
+	/**
+	 * LoginController 빈등록 확인용
+	 * 
+	 * @param custId 회원 ID
+	 * @param passwd 회원 비밀번호
+	 * @param email 회원 이메일
+	 */	
 	@RequestMapping("/join.do")
 	public ModelAndView join(@RequestParam HashMap<String, String> params) {
 		int result = joinService.join(params);

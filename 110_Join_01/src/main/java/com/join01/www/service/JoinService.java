@@ -8,7 +8,15 @@ import at.favre.lib.crypto.bcrypt.BCrypt;
 
 public class JoinService {
 	
-	
+	/**
+	 * 회원가입시 회원 비밀번호 암호화
+	 * 
+	 * @param custId 회원 ID
+	 * @param passwd 회원 비밀번호
+	 * @param email 회원 이메일
+	 * 
+	 * @return 회원 비밀번호 암호화하여 param값에 담아 리턴
+	 */	
 	public int join(HashMap<String, String> params) {
 //		System.out.println(params);
 		
@@ -25,6 +33,9 @@ public class JoinService {
 		
 	}
 	
+	/**
+	 * JoinDao 연결 확인 & joinDao로 값 전달 
+	 */	
 	private JoinDao joinDao;
 	public void setJoinDao(JoinDao joinDao) {
 		System.out.println(">>>>>>>>----"+joinDao+ "<<< in joinService");
