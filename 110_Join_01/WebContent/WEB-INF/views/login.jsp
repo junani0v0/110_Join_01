@@ -39,7 +39,6 @@ window.onload = function(){
 		window.location.href = '/110_Join_01/loginPage.do';
 	}
 }
-
 </script>
 
 </body>
